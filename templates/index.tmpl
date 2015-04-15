@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html lang="de">
+  <head>
+    <link href="/static/style.css" rel="stylesheet" type="text/css" />
+    <title>Guestbook</title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <section id="content">
+        <h1>Guestbook (<a href="/source">Source</a>)</h1>
+        {% if posts %}
+          <ul id="posts">
+            {% for post in posts %}
+              <li class="post">
+                <span class="author">{{ post.author }}</span>
+                <p>{{ post.content }}</p>
+              </li>
+            {% endfor %}
+          </ul>
+          <hr />
+        {% endif %}
+        <form action="/post" method="POST">
+          <table id="form">
+            <tr>
+              <td>Name</td>
+              <td><input type="text" name="author"></td>
+            </tr>
+            <tr>
+              <td>Message</td>
+              <td><textarea name="content" rows="10" cols="40"></textarea></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><button>Post</button></td>
+            </tr>
+          </table>
+        </form>
+      </section>
+    </div>
+  </body>
+</html>

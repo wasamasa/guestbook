@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 50%;
+  font-family: 'Arial', 'Helvetica', sans;
+}
+
+#content {
+  padding: 1em 1em 1.5em 1em;
+}
+
+h1 {
+  margin: 0.5em 0;
+}
+
+hr {
+  margin: 1em 0;
+}
+
+ul {
+  list-style: none
+}
+
+li {
+  padding: 0.5em 1em;
+}
+
+td {
+  vertical-align: top;
+  padding: 0.1em 0
+}
+
+p {
+  padding-top: 0.5em;
+}
+
+.author {
+  text-decoration: underline;
+}
